@@ -41,6 +41,11 @@ def dog():
 if __name__ == '__main__':
    app.run()
 
+@app.route('/users/<username>')
+def hi(username=None):
+    return render_template('hi.html', name=username)
+
+
 
 
 
